@@ -11,13 +11,13 @@ body{
 `;
 function App() {
     return (
-        <div className="App">
+        <>
             <GlobalStyle />
             <TodoTemplate>
                 <TodoHead />
                 <TodoList />
             </TodoTemplate>
-        </div>
+        </>
     );
 }
 
