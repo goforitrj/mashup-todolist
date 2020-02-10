@@ -8,17 +8,17 @@ const initialTodos = [
     },
     {
         id: 2,
-        text: "Let's learn Sass",
+        text: "Studying Sass",
         done: false
     },
     {
         id: 3,
-        text: "Let's create website",
-        done: false
+        text: "Creating todolist app",
+        done: true
     },
     {
         id: 4,
-        text: "Let's get a jobf",
+        text: "Visiting Korean grocery stores",
         done: true
     }
 ];

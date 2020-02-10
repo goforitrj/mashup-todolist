@@ -24,12 +24,20 @@ const TodoHeadBlock = styled.div`
 `;
 function TodoHead() {
     const todos = useTodoState();
-    console.log(todos);
+    const undoneTasks = todos.filter(todo => todo.done).length;
+
+    const today = new Date();
+    const dateString = today.toLocaleDateString('en-us', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    const dayName = today.toLocaleDateString('en-us', { weekday: 'long' });
     return (
         <TodoHeadBlock>
-            <h1>2020 FEB 9</h1>
-            <div className="day">SUNDAY</div>
-            <div className="tasks-left">YOU HAVE 2 MORE TASKS</div>
+            <h1>{dateString}</h1>
+            <div className="day">{dayName}</div>
+            <div className="tasks-left">YOU HAVE {undoneTasks} MORE TASKS</div>
         </TodoHeadBlock>
     );
 }
