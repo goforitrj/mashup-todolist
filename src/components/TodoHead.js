@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTodoState } from './TodoContext';
 
 const TodoHeadBlock = styled.div`
-    padding: 48px 32px 24px 32px ;
+    padding: 48px 32px 24px 32px;
     border-bottom: 1px solid #e9ecef;
     h1 {
         margin: 0;
@@ -22,6 +23,8 @@ const TodoHeadBlock = styled.div`
     }
 `;
 function TodoHead() {
+    const todos = useTodoState();
+    console.log(todos);
     return (
         <TodoHeadBlock>
             <h1>2020 FEB 9</h1>
