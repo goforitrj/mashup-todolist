@@ -88,7 +88,7 @@ function TodoCreate() {
     };
     return (
         <>
-            {true && (
+            {open && (
                 <InsertForm>
                     <Input
                         autoFocus
